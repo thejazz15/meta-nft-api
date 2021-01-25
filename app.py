@@ -19,7 +19,7 @@ def get_random_string(length):
 
 def get_peerplays():
     return PeerPlays(
-        "ws://3.6.53.92:8090",
+        environ.get('NODE_URI'),
         keys=wifs,
         nobroadcast=False
         )
